@@ -3,25 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ITextModel } from '../../../../../../editor/common/model.js';
+import { ITextModel } from '../../../../../../../editor/common/model.js';
 import { TextModelPromptDecorator } from './textModelPromptDecorator.js';
-import { IEditorModel } from '../../../../../../editor/common/editorCommon.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { isPromptFile } from '../../../../../../platform/prompts/common/constants.js';
-import { Disposable, DisposableMap } from '../../../../../../base/common/lifecycle.js';
-import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../../../../../common/contributions.js';
-
-/**
- * TODO: @legomushroom - add unit tests
- */
+import { IEditorModel } from '../../../../../../../editor/common/editorCommon.js';
+import { isPromptFile } from '../../../../../../../platform/prompts/common/constants.js';
+import { Disposable, DisposableMap } from '../../../../../../../base/common/lifecycle.js';
+import { IEditorService } from '../../../../../../services/editor/common/editorService.js';
+import { IInstantiationService } from '../../../../../../../platform/instantiation/common/instantiation.js';
 
 /**
  * Provider for prompt syntax decorators on text models.
  */
-class PromptDecoratorsInstanceManager extends Disposable {
+export class PromptDecoratorsInstanceManager extends Disposable {
 	/**
 	 * Map of all currently active prompt decorator instances.
 	 */
@@ -111,7 +104,3 @@ class PromptDecoratorsInstanceManager extends Disposable {
 		return this;
 	}
 }
-
-// register the text model prompt decorators provider as a workbench contribution
-Registry.as<IWorkbenchContributionsRegistry>(WorkbenchExtensions.Workbench)
-	.registerWorkbenchContribution(PromptDecoratorsInstanceManager, LifecyclePhase.Eventually);

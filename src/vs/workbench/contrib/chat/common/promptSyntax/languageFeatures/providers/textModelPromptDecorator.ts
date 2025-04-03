@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../../../nls.js';
-import { IPromptsService } from '../service/types.js';
-import { chatSlashCommandBackground } from '../../chatColors.js';
-import { Color, RGBA } from '../../../../../../base/common/color.js';
-import { IRange } from '../../../../../../editor/common/core/range.js';
-import { TextModelPromptParser } from '../parsers/textModelPromptParser.js';
-import { BaseToken } from '../../../../../../editor/common/codecs/baseToken.js';
-import { ModelDecorationOptions } from '../../../../../../editor/common/model/textModel.js';
-import { ObservableDisposable } from '../../../../../../base/common/observableDisposable.js';
-import { ITextModel, TrackedRangeStickiness } from '../../../../../../editor/common/model.js';
-import { IMarkdownString, MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { contrastBorder, registerColor } from '../../../../../../platform/theme/common/colorRegistry.js';
-import { IColorTheme, ICssStyleCollector, registerThemingParticipant } from '../../../../../../platform/theme/common/themeService.js';
-import { FrontMatterHeaderToken } from '../../../../../../editor/common/codecs/markdownExtensionsCodec/tokens/frontMatterHeaderToken.js';
+import { localize } from '../../../../../../../nls.js';
+import { IPromptsService } from '../../service/types.js';
+import { chatSlashCommandBackground } from '../../../chatColors.js';
+import { Color, RGBA } from '../../../../../../../base/common/color.js';
+import { IRange } from '../../../../../../../editor/common/core/range.js';
+import { TextModelPromptParser } from '../../parsers/textModelPromptParser.js';
+import { BaseToken } from '../../../../../../../editor/common/codecs/baseToken.js';
+import { ModelDecorationOptions } from '../../../../../../../editor/common/model/textModel.js';
+import { ObservableDisposable } from '../../../../../../../base/common/observableDisposable.js';
+import { ITextModel, TrackedRangeStickiness } from '../../../../../../../editor/common/model.js';
+import { IMarkdownString, MarkdownString } from '../../../../../../../base/common/htmlContent.js';
+import { contrastBorder, registerColor } from '../../../../../../../platform/theme/common/colorRegistry.js';
+import { IColorTheme, ICssStyleCollector, registerThemingParticipant } from '../../../../../../../platform/theme/common/themeService.js';
+import { FrontMatterHeaderToken } from '../../../../../../../editor/common/codecs/markdownExtensionsCodec/tokens/frontMatterHeaderToken.js';
 
 /**
  * TODO: @legomushroom - list
