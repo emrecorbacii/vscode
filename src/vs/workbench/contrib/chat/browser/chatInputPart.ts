@@ -566,7 +566,7 @@ export class ChatInputPart extends Disposable implements IHistoryNavigationWidge
 
 		if (state.inputState?.chatMode) {
 			this.setChatMode(state.inputState.chatMode);
-		} else if (this.location === ChatAgentLocation.EditingSession) {
+		} else if (this.location === ChatAgentLocation.Panel) {
 			this.setChatMode(ChatMode.Edit);
 		}
 	}
